@@ -1,0 +1,23 @@
+[package]
+name = "explorer_snowflake"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[lib]
+name = "explorer_snowflake"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.25.0"
+explorer = { git = "https://github.com/elixir-nx/explorer" }
+indexmap = "1.9.0"
+
+
+[dependencies.polars]
+version = "0.21.1"
+default-features = false
+features = [
+    "ipc",
+]
